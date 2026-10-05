@@ -50,9 +50,11 @@ The home page should present, approximately in this order:
 
 1. Pedro's name, current role, focus, and direct paths to projects, CV, and contact.
 2. Selected projects.
-3. A concise view of his current work and trajectory.
-4. Community activity and selected content, only when real material is available.
-5. Relevant contact and profile links.
+3. Professional experience, organized by company with distinct roles.
+4. Academic education.
+5. Courses and certifications, with the credential type made explicit.
+6. Community activity and selected content, only when real material is available.
+7. Relevant contact and profile links.
 
 Do not place a long biography before the projects. Start with two selected projects. Do not create empty routes to make the navigation appear complete. Evaluate whether a separate projects index is useful only after the home page exists.
 
@@ -64,7 +66,16 @@ Planned routes, when supported by content:
 - a content page only when enough publications exist;
 - an activity page only when enough material exists.
 
-The trajectory must show evolving responsibilities and simultaneous activities. Group the infrastructure-to-development progression at Ideal Grupo under the same company using confirmed dates. On mobile, do not require horizontal timeline scrolling.
+Professional experience, academic education, credentials, and community are separate content categories and separate home-page sections. Group the infrastructure-to-development progression at Ideal Grupo under the same company, with roles and confirmed periods kept distinct. On mobile, do not require horizontal timeline scrolling.
+
+Store typed content by category under `src/content/`: profile/navigation, projects, experience, education, credentials, community, and their shared types. Optional fields must not render when the information is unconfirmed.
+
+The initial project routes are:
+
+- `/projetos/ideal-admissao`;
+- `/projetos/antifraud-system`.
+
+Home-page project links lead to these case studies. Public repositories are complementary links. Case studies include context, confirmed contribution, operation, decisions, technologies tied to their use, verification, and available materials.
 
 Connect content only through real relationships: an experience can point to its project, a project to a related article, and an activity to its materials. Tie technologies to their concrete use instead of presenting generic logo grids, skill bars, or percentages.
 
