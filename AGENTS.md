@@ -49,24 +49,37 @@ Primary audiences are Brazilian recruiters, technical leaders evaluating Pedro's
 The home page should present, approximately in this order:
 
 1. Pedro's name, current role, focus, and direct paths to projects, CV, and contact.
-2. Selected projects.
-3. Professional experience, organized by company with distinct roles.
-4. Academic education.
-5. Courses and certifications, with the credential type made explicit.
-6. Community activity and selected content, only when real material is available.
+2. A stack overview grouped by context and depth.
+3. Selected projects.
+4. A personal and professional summary linking to the About page.
+5. Community activity.
+6. Selected content, the channel, and a manually maintained "Currently" block.
 7. Relevant contact and profile links.
 
 Do not place a long biography before the projects. Start with two selected projects. Do not create empty routes to make the navigation appear complete. Evaluate whether a separate projects index is useful only after the home page exists.
 
-Planned routes, when supported by content:
+Implemented route structure:
 
-- `/` for the home page;
-- one stable route per important case study;
-- a trajectory page;
-- a content page only when enough publications exist;
-- an activity page only when enough material exists.
+- `/` for presentation and selected highlights;
+- `/projetos` for the project directory;
+- `/projetos/ideal-admissao` and `/projetos/antifraud-system` for case studies;
+- `/sobre` for experience, education, credentials, and recommendations;
+- `/conteudos` for the channel and registered articles, videos, and external publications;
+- `/conteudos/[slug]` for statically generated internal articles;
+- `/comunidade` for the AWS Student Builder Group and its confirmed activities.
+
+Do not duplicate complete text across routes. Home uses summaries and links to the deeper page. Content remains file-based and typed under `src/content/`; maintenance instructions and non-public examples live in `CONTENT.md`.
 
 Professional experience, academic education, credentials, and community are separate content categories and separate home-page sections. Group the infrastructure-to-development progression at Ideal Grupo under the same company, with roles and confirmed periods kept distinct. On mobile, do not require horizontal timeline scrolling.
+
+Confirmed profile and timeline data:
+
+- Hero direction: "Desenvolvimento de software com foco em backend." Pedro's current title is "Estagiário de Desenvolvimento de Software".
+- Ideal Grupo is in São Sebastião, SP, with on-site work. The development internship runs from June 2026 to the present; the Support and IT Infrastructure Apprentice role ran from December 2025 to June 2026.
+- Technology in Systems Analysis and Development at Fatec São Sebastião runs from February 2026 to December 2028 (expected) and is in progress.
+- The Internet Informatics technical course at IFSP ran from July 2024 to December 2025 and is complete.
+- AWS re/Start is a completed training program from AWS / Espro, concluded in September 2026. It is not an AWS professional certification.
+- AWS Student Builder Group leadership at Fatec São Sebastião runs from September 2026 to the present. Meetings, workshops, study groups, and practical projects are fronts of activity, not claims about completed events.
 
 Store typed content by category under `src/content/`: profile/navigation, projects, experience, education, credentials, community, and their shared types. Optional fields must not render when the information is unconfirmed.
 
@@ -123,7 +136,7 @@ Reported architecture and technology:
 
 Good areas for deeper explanation are independent step review, continuity of completion, HR/candidate access differences, the ERP-to-PDF-to-signature order, and domain organization.
 
-Pedro's exact individual contribution and the current deployment state are not yet confirmed. Do not claim exclusive authorship, production use, savings, or time reduction until confirmed. Private repositories must not be linked or exposed.
+The system was developed to replace a third-party tool costing approximately R$ 100,000 per year. Treat this value only as problem context, not as confirmed savings. Pedro's exact individual contribution and the current deployment state are not yet confirmed. Do not claim exclusive authorship, production use, savings, or time reduction until confirmed. Private repositories must not be linked or exposed.
 
 ### Antifraud System
 
@@ -164,12 +177,29 @@ Reveal information progressively: summary, operation, and technical depth. Use a
 
 ## Links and media
 
+- Confirmed public profiles: GitHub `https://github.com/LS-PLuka` and LinkedIn `https://www.linkedin.com/in/pedroluka-dev/`.
+- Confirmed contact email: `dev.pedroluka@gmail.com`.
+- Confirmed channel: `https://www.youtube.com/@plkontech` (`@plkontech`).
+- Confirmed AWS Student Builder Group page: `https://www.linkedin.com/company/aws-sbg-fatec-saosebastiao/about/`.
+- Confirmed AWS re/Start credential: `https://www.credly.com/badges/19dc3cbf-8b21-4b17-a785-950c99bd978f/linked_in_profile`.
 - Surface CV, GitHub, LinkedIn, email, and AWS Builder Center only when their real URLs or files are available.
 - Make the CV easy to find and label it as PDF.
 - Curate GitHub repositories manually. Start LinkedIn and Builder Center as direct links rather than automated feeds.
 - Distinguish completion of AWS re/Start from an AWS professional certification.
 - Do not treat commit counts or stars as the main evidence of ability.
 - If a CV, photo, link, or publication is missing, keep the data structure ready without rendering broken or invented content.
+- Optional images use typed records with source path, alt text, width, height, and an optional caption. Store local assets under `public/images/`. Never render placeholders for absent personal or community media.
+- Videos begin as links with optional cover images. Do not embed heavy players on page load.
+- LinkedIn and AWS Builder Center content is curated manually; never add automatic feeds without a new explicit requirement.
+
+## Recommendations
+
+Recommendations are discreet editorial content, not a carousel. Identify them as excerpts received on LinkedIn and link only to the authors' profiles:
+
+- Luiz Reche, AWS re/Start instructor, September 2026: `https://www.linkedin.com/in/luizreche/`.
+- Denny Paulista Azevedo Filho, Development Web professor, February 2026: `https://www.linkedin.com/in/denny-azevedo/`.
+
+Keep recommendation excerpts verbatim in `src/content/recommendations.ts`.
 
 ## Quality bar and verification
 

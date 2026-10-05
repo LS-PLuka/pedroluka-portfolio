@@ -3,16 +3,28 @@ export type NavigationItem = {
   href: `/${string}`;
 };
 
+export type MediaAsset = {
+  src: `/${string}`;
+  alt: string;
+  width: number;
+  height: number;
+  caption?: string;
+};
+
 export type Role = {
   title: string;
   period?: string;
   description: string;
+  responsibilities?: readonly string[];
+  focus?: readonly string[];
   projectHref?: `/projetos/${string}`;
   projectLabel?: string;
 };
 
 export type Experience = {
   company: string;
+  location?: string;
+  mode?: string;
   roles: readonly Role[];
 };
 
@@ -22,6 +34,7 @@ export type Education = {
   level: string;
   status: "Em andamento" | "Concluído";
   period?: string;
+  description?: string;
 };
 
 export type Credential = {
@@ -30,8 +43,62 @@ export type Credential = {
   status: "Concluído" | "Em andamento";
   issuer?: string;
   period?: string;
+  description?: string;
   verificationUrl?: `https://${string}`;
 };
+
+export type Recommendation = {
+  author: string;
+  relationship: string;
+  period: string;
+  excerpt: string;
+  profileUrl: `https://${string}`;
+};
+
+export type StackGroup = {
+  title: string;
+  level: "Foco principal" | "Tecnologias complementares" | "Em aprofundamento";
+  items: readonly string[];
+};
+
+export type CommunityActivity = {
+  title: string;
+  date: string;
+  status: "Realizada" | "Planejada";
+  description: string;
+  images?: readonly MediaAsset[];
+  materials?: readonly Material[];
+};
+
+export type ContentBase = {
+  id: string;
+  title: string;
+  summary: string;
+  date: string;
+  type: "Artigo" | "Vídeo" | "Publicação";
+  origin: "Site" | "YouTube" | "LinkedIn" | "AWS Builder Center";
+  tags: readonly string[];
+  image?: MediaAsset;
+  featured: boolean;
+};
+
+export type ArticleBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "heading"; text: string }
+  | { type: "list"; items: readonly string[] };
+
+export type InternalArticle = ContentBase & {
+  type: "Artigo";
+  origin: "Site";
+  slug: string;
+  body: readonly ArticleBlock[];
+};
+
+export type ExternalContent = ContentBase & {
+  url: `https://${string}`;
+};
+
+export type ContentEntry = InternalArticle | ExternalContent;
 
 export type TechnologyUse = {
   technology: string;

@@ -10,7 +10,7 @@ export const projects: readonly CaseStudy[] = [
     purpose:
       "Conduzir a admissão de colaboradores do preenchimento inicial até a assinatura do kit admissional.",
     summary:
-      "Um portal para candidatos e um painel para o RH coordenam etapas independentes, documentos, integração com o ERP e assinatura digital.",
+      "Sistema fullstack que reúne preenchimento de dados, revisão do RH, integração com Protheus e assinatura eletrônica em um único fluxo de admissão.",
     highlights: [
       "Revisão independente por etapa",
       "Continuidade do preenchimento",
@@ -18,7 +18,7 @@ export const projects: readonly CaseStudy[] = [
     ],
     href: "/projetos/ideal-admissao",
     problem: [
-      "O processo admissional reúne dados pessoais, documentos, validações do RH, cadastro no ERP e assinaturas. Quando essas partes não compartilham um fluxo claro, o candidato perde contexto e o RH precisa acompanhar pendências em diferentes pontos.",
+      "O processo admissional reúne dados pessoais, documentos, validações do RH, cadastro no ERP e assinaturas. A solução foi desenvolvida para substituir uma ferramenta terceirizada com custo aproximado de R$ 100 mil por ano e concentrar esse fluxo em um sistema interno.",
       "O sistema organiza essa jornada sem tratar a admissão como um formulário único: cada etapa possui estado próprio e pode voltar para correção sem desfazer o que já foi aprovado.",
     ],
     // A contribuição individual e o estado de implantação aguardam confirmação.

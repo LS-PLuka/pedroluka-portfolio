@@ -43,7 +43,7 @@ export function CaseStudyPage({ project, otherProject }: CaseStudyPageProps) {
       <main id="conteudo">
         <header className="case-hero page-grid">
           <div className="case-hero__rail">
-            <Link className="back-link" href="/#projetos">
+            <Link className="back-link" href="/projetos">
               Voltar aos projetos
             </Link>
             <dl>
@@ -150,7 +150,7 @@ export function CaseStudyPage({ project, otherProject }: CaseStudyPageProps) {
         </CaseSection>
 
         <nav className="next-project page-grid" aria-label="Navegação entre projetos">
-          <Link href="/">Página inicial</Link>
+          <Link href="/projetos">Todos os projetos</Link>
           <Link href={otherProject.href}>
             Próximo projeto: {otherProject.title}
             <ArrowRightIcon />
