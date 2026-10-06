@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo } from "next/font/google";
 
+import { MotionObserver } from "@/components/motion-observer";
+
 import "./globals.css";
 
 const archivo = Archivo({
@@ -31,7 +33,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-BR" className={archivo.variable} data-scroll-behavior="smooth">
-      <body>{children}</body>
+      <body><MotionObserver />{children}</body>
     </html>
   );
 }

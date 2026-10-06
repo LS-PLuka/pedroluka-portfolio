@@ -4,7 +4,7 @@ export const recommendations: readonly Recommendation[] = [
   {
     author: "Luiz Reche",
     relationship: "Instrutor no AWS re/Start",
-    period: "Set 2026",
+    period: "Setembro de 2026",
     excerpt:
       "Durante o curso, o Pedro demonstrou uma capacidade excepcional de absorver conceitos complexos de computação em nuvem, com um destaque notável para o desenho de arquiteturas na AWS.",
     profileUrl: "https://www.linkedin.com/in/luizreche/",
@@ -12,7 +12,7 @@ export const recommendations: readonly Recommendation[] = [
   {
     author: "Denny Paulista Azevedo Filho",
     relationship: "Professor de Desenvolvimento Web",
-    period: "Fev 2026",
+    period: "Fevereiro de 2026",
     excerpt:
       "Ele se destacou pela organização, pela capacidade de transformar requisitos em código funcional e pela responsabilidade com prazos e entregas.",
     profileUrl: "https://www.linkedin.com/in/denny-azevedo/",

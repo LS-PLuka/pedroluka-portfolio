@@ -9,11 +9,13 @@ export const navigation = [
 
 export const profile = {
   name: "Pedro Luka",
-  currentRole: "Estagiário de Desenvolvimento de Software na Ideal Grupo.",
+  currentRole: "Estagiário de Desenvolvimento de Software",
+  currentContext:
+    "Atualmente, sou estagiário de Desenvolvimento de Software na Ideal Grupo.",
   location: "São Sebastião, SP",
-  headline: "Engenheiro de software com foco em backend",
+  headline: "Engenheiro de software com foco em backend.",
   summary:
-    "Desenvolvo sistemas internos e integrações com Java e Spring Boot. Também lidero o AWS Student Builder Group na Fatec São Sebastião.",
+    "Trabalho com Java e Spring Boot e lidero o AWS Student Builder Group na Fatec São Sebastião.",
   homeAbout: [
     "Atualmente, trabalho na Ideal Grupo desenvolvendo softwares internos que substituem ferramentas de terceiros e apoiam processos de negócio.",
     "Sou Técnico em Informática para Internet pelo IFSP, estudante de ADS na Fatec São Sebastião e concluí o AWS re/Start. Também desenvolvo projetos pessoais e estou começando a compartilhar conteúdo de tecnologia.",

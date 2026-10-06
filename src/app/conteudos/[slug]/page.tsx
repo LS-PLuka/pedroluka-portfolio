@@ -5,6 +5,7 @@ import { PageIntro } from "@/components/page-intro";
 import { OptionalImage } from "@/components/optional-image";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { PageTransition } from "@/components/page-transition";
 import { internalArticles } from "@/content/contents";
 
 export const dynamicParams = false;
@@ -29,7 +30,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     <>
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <SiteHeader />
-      <main id="conteudo">
+      <PageTransition><main id="conteudo">
         <PageIntro icon="article" title={article.title} description={article.summary} note={`${article.date} · ${article.tags.join(", ")}`} />
         {article.image ? <div className="article-cover"><OptionalImage image={article.image} /></div> : null}
         <article className="article-body">
@@ -39,7 +40,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             return <p key={`${block.type}-${index}`}>{block.text}</p>;
           })}
         </article>
-      </main>
+      </main></PageTransition>
       <SiteFooter />
     </>
   );

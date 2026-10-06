@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
 import { OptionalImage } from "@/components/optional-image";
 import { PageIntro } from "@/components/page-intro";
+import { PageTransition } from "@/components/page-transition";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -25,7 +26,7 @@ export default function AboutPage() {
     <>
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <SiteHeader />
-      <main id="conteudo">
+      <PageTransition><main id="conteudo">
         <PageIntro icon="person" title="Sobre" description={profile.about} note={profile.currentRole} />
 
         {siteMedia.portrait ? (
@@ -116,7 +117,7 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
-      </main>
+      </main></PageTransition>
       <SiteFooter />
     </>
   );

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRightIcon, ArrowUpRightIcon } from "@/components/icons";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { PageTransition } from "@/components/page-transition";
 import type { CaseStudy } from "@/content/types";
 
 type CaseStudyPageProps = {
@@ -40,7 +41,7 @@ export function CaseStudyPage({ project, otherProject }: CaseStudyPageProps) {
       </a>
       <SiteHeader />
 
-      <main id="conteudo">
+      <PageTransition><main id="conteudo">
         <header className="case-hero page-grid">
           <div className="case-hero__rail">
             <Link className="back-link" href="/projetos">
@@ -156,7 +157,7 @@ export function CaseStudyPage({ project, otherProject }: CaseStudyPageProps) {
             <ArrowRightIcon />
           </Link>
         </nav>
-      </main>
+      </main></PageTransition>
 
       <SiteFooter />
     </>

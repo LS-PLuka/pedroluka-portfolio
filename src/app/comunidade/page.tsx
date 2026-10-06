@@ -4,6 +4,7 @@ import { ContentList } from "@/components/content-list";
 import { ArrowUpRightIcon } from "@/components/icons";
 import { OptionalImage } from "@/components/optional-image";
 import { PageIntro } from "@/components/page-intro";
+import { PageTransition } from "@/components/page-transition";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -24,7 +25,7 @@ export default function CommunityPage() {
     <>
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <SiteHeader />
-      <main id="conteudo">
+      <PageTransition><main id="conteudo">
         <PageIntro icon="users" title="Comunidade" description="AWS Student Builder Group na Fatec São Sebastião e minha atuação como líder." note={community.period} />
 
         <section className="content-section page-grid" aria-labelledby="group-title">
@@ -79,7 +80,7 @@ export default function CommunityPage() {
             <div className="section-body"><ContentList entries={communityContents} /></div>
           </section>
         ) : null}
-      </main>
+      </main></PageTransition>
       <SiteFooter />
     </>
   );

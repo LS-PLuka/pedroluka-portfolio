@@ -2,9 +2,11 @@ import Link from "next/link";
 
 import { ContactSection } from "@/components/contact-section";
 import { ContentList } from "@/components/content-list";
-import { ArrowRightIcon, ArrowUpRightIcon } from "@/components/icons";
+import { ArrowRightIcon, ArrowUpRightIcon, SocialIcon } from "@/components/icons";
 import { OptionalImage } from "@/components/optional-image";
+import { PageTransition } from "@/components/page-transition";
 import { ProjectList } from "@/components/project-list";
+import { RecommendationList } from "@/components/recommendation-list";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -14,6 +16,7 @@ import { currently } from "@/content/currently";
 import { siteMedia } from "@/content/media";
 import { profile } from "@/content/profile";
 import { projects } from "@/content/projects";
+import { recommendations } from "@/content/recommendations";
 import { featuredStack } from "@/content/stack";
 
 export default function Home() {
@@ -22,26 +25,32 @@ export default function Home() {
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <SiteHeader />
 
-      <main id="conteudo">
-        <section className="hero page-grid" id="inicio" aria-labelledby="hero-title">
-          <aside className="hero__context" aria-label="Contexto atual">
-            <p>{profile.currentRole}</p>
-            <p>{profile.location}</p>
-          </aside>
+      <PageTransition><main id="conteudo">
+        <section className={`hero page-grid${siteMedia.portrait ? " hero--with-portrait" : ""}`} id="inicio" aria-labelledby="hero-title">
           <div className="hero__content">
-            <p className="hero__name">{profile.name}</p>
-            <h1 id="hero-title">{profile.headline}</h1>
-            <p className="hero__summary">{profile.summary}</p>
-            <div className="hero__actions" aria-label="Atalhos">
-              <Link className="primary-link" href="/projetos">Conhecer os projetos</Link>
-              <a className="text-link" href="#contato">Entrar em contato</a>
+            <p className="hero__intro" data-hero-step>Olá, eu sou</p>
+            <h1 id="hero-title" data-hero-step>{profile.name}</h1>
+            <p className="hero__profession" data-hero-step>{profile.headline}</p>
+            <div className="hero__details" data-hero-step>
+              <p>{profile.currentContext}</p>
+              <p>{profile.summary}</p>
+              <p className="hero__location">{profile.location}</p>
+            </div>
+            <div className="hero__actions" aria-label="Atalhos e perfis" data-hero-step>
+              <Link className="primary-link" href="/projetos">Ver meus projetos</Link>
+              <Link className="text-link" href="/sobre">Sobre mim</Link>
+              <ul className="hero__socials" aria-label="Perfis profissionais">
+                <li><a href={profile.github} aria-label="GitHub de Pedro Luka"><SocialIcon name="github" /></a></li>
+                <li><a href={profile.linkedin} aria-label="LinkedIn de Pedro Luka"><SocialIcon name="linkedin" /></a></li>
+              </ul>
             </div>
           </div>
+          <OptionalImage image={siteMedia.portrait} className="hero__portrait" />
         </section>
 
         <section className="content-section page-grid" id="stack" aria-labelledby="stack-title">
           <div className="section-rail">
-            <SectionHeading id="stack-title" icon="code" title="Stack" description="Tecnologias centrais na minha atuação." />
+            <SectionHeading id="stack-title" icon="code" title="Tecnologias que utilizo" description="Tecnologias centrais na minha atuação." />
           </div>
           <div className="section-body stack-summary">
             <p className="stack-summary__intro">Meu foco é backend com Java e Spring Boot, integrações e cloud.</p>
@@ -54,14 +63,14 @@ export default function Home() {
 
         <section className="content-section page-grid" id="projetos" aria-labelledby="projects-title">
           <div className="section-rail">
-            <SectionHeading id="projects-title" icon="folder" title="Projetos selecionados" description="Estudos de caso com contexto, decisões e verificação." />
+            <SectionHeading id="projects-title" icon="folder" title="Meus projetos" description="Estudos de caso com contexto, decisões e verificação." />
           </div>
           <ProjectList projects={projects} />
         </section>
 
         <section className="content-section page-grid" id="sobre" aria-labelledby="about-title">
           <div className="section-rail">
-            <SectionHeading id="about-title" icon="person" title="Sobre" description="Atuação profissional, formação e estudos atuais." />
+            <SectionHeading id="about-title" icon="person" title="Sobre mim" description="Atuação profissional, formação e estudos atuais." />
           </div>
           <div className={`section-body about-preview${siteMedia.portrait ? " about-preview--with-image" : ""}`}>
             <OptionalImage image={siteMedia.portrait} className="about-preview__image" />
@@ -71,6 +80,15 @@ export default function Home() {
               </div>
               <Link className="text-link" href="/sobre">Mais sobre mim <ArrowRightIcon /></Link>
             </div>
+          </div>
+        </section>
+
+        <section className="content-section page-grid" id="recomendacoes" aria-labelledby="home-recommendations-title">
+          <div className="section-rail">
+            <SectionHeading id="home-recommendations-title" icon="quote" title="Recomendações" description="Trechos de recomendações recebidas no LinkedIn." />
+          </div>
+          <div className="section-body">
+            <RecommendationList recommendations={recommendations} />
           </div>
         </section>
 
@@ -98,7 +116,7 @@ export default function Home() {
 
         <section className="content-section page-grid" id="conteudos" aria-labelledby="contents-title">
           <div className="section-rail">
-            <SectionHeading id="contents-title" icon="article" title="Conteúdos" description="Artigos e vídeos sobre tecnologia e estudos em andamento." />
+            <SectionHeading id="contents-title" icon="article" title="Artigos e vídeos" description="Conteúdo sobre tecnologia e estudos em andamento." />
           </div>
           <div className="section-body content-preview">
             <div className="channel-block">
@@ -124,7 +142,7 @@ export default function Home() {
         </section>
 
         <ContactSection />
-      </main>
+      </main></PageTransition>
       <SiteFooter />
     </>
   );

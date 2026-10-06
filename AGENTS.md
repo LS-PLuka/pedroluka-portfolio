@@ -23,6 +23,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 This is Pedro Luka's personal portfolio. It should connect his current work, selected projects, education, community activity, and technical content with a clear point of view and strong visual quality.
 
+The site is personal: Pedro Luka must have the leading role from the first screen, and visitors should immediately understand his work and be able to explore what he has built. Recommendations received are part of the portfolio structure and must be preserved.
+
 Pedro is:
 
 - a software development intern at Ideal Grupo;
@@ -74,7 +76,7 @@ Professional experience, academic education, credentials, and community are sepa
 
 Confirmed profile and timeline data:
 
-- Hero direction: "Engenheiro de software com foco em backend." Keep Pedro's current role explicit as "Estagiário de Desenvolvimento de Software na Ideal Grupo."
+- Hero direction: introduce Pedro in the first person and use "Pedro Luka" as the H1 and main visual element. Present "Engenheiro de software com foco em backend." as his professional direction, while keeping his current internship at Ideal Grupo explicit nearby.
 - Ideal Grupo is in São Sebastião, SP, with on-site work. The development internship runs from June 2026 to the present; the Support and IT Infrastructure Apprentice role ran from December 2025 to June 2026.
 - Technology in Systems Analysis and Development at Fatec São Sebastião runs from February 2026 to December 2028 (expected) and is in progress.
 - The Internet Informatics technical course at IFSP ran from July 2024 to December 2025 and is complete.

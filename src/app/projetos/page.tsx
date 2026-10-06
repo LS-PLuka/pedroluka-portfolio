@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { PageIntro } from "@/components/page-intro";
+import { PageTransition } from "@/components/page-transition";
 import { ProjectList } from "@/components/project-list";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -16,13 +17,13 @@ export default function ProjectsPage() {
     <>
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <SiteHeader />
-      <main id="conteudo">
-        <PageIntro icon="folder" title="Projetos" description="Estudos de caso organizados pelo problema, pelas decisões técnicas e pela forma de verificação." note={`${projects.length} estudos de caso`} />
+      <PageTransition><main id="conteudo">
+        <PageIntro icon="folder" title="Meus projetos" description="Estudos de caso organizados pelo problema, pelas decisões técnicas e pela forma de verificação." note={`${projects.length} estudos de caso`} />
         <section className="directory-section page-grid" aria-label="Lista de projetos">
           <div className="directory-section__rail"><p>Selecionados</p></div>
           <ProjectList projects={projects} />
         </section>
-      </main>
+      </main></PageTransition>
       <SiteFooter />
     </>
   );
