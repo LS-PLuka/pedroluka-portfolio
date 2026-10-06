@@ -9,6 +9,6 @@ export const currently = [
   },
   {
     label: "Compartilhando",
-    text: "A jornada de aprendizado em tecnologia no @plkontech.",
+    text: "Vídeos sobre tecnologia no @plkontech.",
   },
 ] as const;

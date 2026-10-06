@@ -7,13 +7,10 @@ export function ContactSection() {
   return (
     <section className="contact-section page-grid" id="contato" aria-labelledby="contact-title">
       <div className="contact-section__lead">
-        <SectionHeading id="contact-title" marker="@" title="Contato" />
+        <SectionHeading id="contact-title" icon="mail" title="Contato" />
       </div>
       <div className="contact-section__body">
-        <p>
-          Meu trabalho está no encontro entre regras de negócio, integrações e decisões que
-          precisam continuar claras quando o sistema cresce.
-        </p>
+        <p>Você pode falar comigo por e-mail ou pelo LinkedIn.</p>
         <div className="contact-list">
           <div className="contact-row">
             <a className="contact-link" href={`mailto:${profile.email}`}>

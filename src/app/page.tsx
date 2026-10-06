@@ -14,7 +14,7 @@ import { currently } from "@/content/currently";
 import { siteMedia } from "@/content/media";
 import { profile } from "@/content/profile";
 import { projects } from "@/content/projects";
-import { stack } from "@/content/stack";
+import { featuredStack } from "@/content/stack";
 
 export default function Home() {
   return (
@@ -27,7 +27,6 @@ export default function Home() {
           <aside className="hero__context" aria-label="Contexto atual">
             <p>{profile.currentRole}</p>
             <p>{profile.location}</p>
-            <span className="status-note"><span aria-hidden="true" />Em formação contínua</span>
           </aside>
           <div className="hero__content">
             <p className="hero__name">{profile.name}</p>
@@ -42,41 +41,42 @@ export default function Home() {
 
         <section className="content-section page-grid" id="stack" aria-labelledby="stack-title">
           <div className="section-rail">
-            <SectionHeading id="stack-title" marker="S" title="Stack" description="Tecnologias organizadas pelo papel que ocupam na minha prática." />
+            <SectionHeading id="stack-title" icon="code" title="Stack" description="Tecnologias centrais na minha atuação." />
           </div>
-          <div className="section-body stack-grid">
-            {stack.map((group) => (
-              <article className={`stack-group stack-group--${group.level === "Foco principal" ? "primary" : group.level === "Em aprofundamento" ? "learning" : "supporting"}`} key={group.title}>
-                <div><p>{group.level}</p><h3>{group.title}</h3></div>
-                <ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul>
-              </article>
-            ))}
+          <div className="section-body stack-summary">
+            <p className="stack-summary__intro">Meu foco é backend com Java e Spring Boot, integrações e cloud.</p>
+            <ul aria-label="Tecnologias em destaque">
+              {featuredStack.map((item) => <li key={item}>{item}</li>)}
+            </ul>
+            <Link className="text-link" href="/sobre#stack-completa">Ver stack completa <ArrowRightIcon /></Link>
           </div>
         </section>
 
         <section className="content-section page-grid" id="projetos" aria-labelledby="projects-title">
           <div className="section-rail">
-            <SectionHeading id="projects-title" marker="P" title="Projetos selecionados" description="Do contexto ao raciocínio técnico." />
+            <SectionHeading id="projects-title" icon="folder" title="Projetos selecionados" description="Estudos de caso com contexto, decisões e verificação." />
           </div>
           <ProjectList projects={projects} />
         </section>
 
         <section className="content-section page-grid" id="sobre" aria-labelledby="about-title">
           <div className="section-rail">
-            <SectionHeading id="about-title" marker="PL" title="Sobre" description="Trabalho, formação e o que estou construindo agora." />
+            <SectionHeading id="about-title" icon="person" title="Sobre" description="Atuação profissional, formação e estudos atuais." />
           </div>
           <div className={`section-body about-preview${siteMedia.portrait ? " about-preview--with-image" : ""}`}>
             <OptionalImage image={siteMedia.portrait} className="about-preview__image" />
             <div className="about-preview__copy">
-              <p>{profile.bio}</p>
-              <Link className="text-link" href="/sobre">Conhecer minha trajetória <ArrowRightIcon /></Link>
+              <div className="about-preview__text">
+                {profile.homeAbout.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
+              <Link className="text-link" href="/sobre">Mais sobre mim <ArrowRightIcon /></Link>
             </div>
           </div>
         </section>
 
         <section className="content-section page-grid" id="comunidade" aria-labelledby="community-title">
           <div className="section-rail">
-            <SectionHeading id="community-title" marker="+" title="Comunidade" description="Aprendizado compartilhado em contexto real." />
+            <SectionHeading id="community-title" icon="users" title="Comunidade" description="AWS Student Builder Group na Fatec São Sebastião." />
           </div>
           <div className={`community-feature${siteMedia.communityLogo ? " community-feature--with-image" : ""}`}>
             <OptionalImage image={siteMedia.communityLogo} className="community-feature__logo" />
@@ -90,6 +90,7 @@ export default function Home() {
               <div className="link-pair">
                 <Link className="primary-link" href="/comunidade">Conhecer a comunidade <ArrowRightIcon /></Link>
                 <a className="text-link" href={community.linkedinUrl}>Página do grupo no LinkedIn <ArrowUpRightIcon /></a>
+                <a className="text-link" href={community.credential.url}>{community.credential.label} <ArrowUpRightIcon /></a>
               </div>
             </div>
           </div>
@@ -97,12 +98,12 @@ export default function Home() {
 
         <section className="content-section page-grid" id="conteudos" aria-labelledby="contents-title">
           <div className="section-rail">
-            <SectionHeading id="contents-title" marker="C" title="Conteúdos" description="Notas, artigos e vídeos sobre o que aprendo construindo." />
+            <SectionHeading id="contents-title" icon="article" title="Conteúdos" description="Artigos e vídeos sobre tecnologia e estudos em andamento." />
           </div>
           <div className="section-body content-preview">
             <div className="channel-block">
               <p className="channel-block__handle">{contentChannel.handle}</p>
-              <h3>Aprendizado também vira conteúdo.</h3>
+              <h3>Conteúdo sobre backend, cloud e estudos em andamento.</h3>
               <p>{contentChannel.description}</p>
               <div className="link-pair">
                 <a className="primary-link" href={contentChannel.url}>Visitar o canal <ArrowUpRightIcon /></a>
@@ -115,7 +116,7 @@ export default function Home() {
 
         <section className="content-section page-grid" id="atualmente" aria-labelledby="currently-title">
           <div className="section-rail">
-            <SectionHeading id="currently-title" marker="→" title="Atualmente" description="Um recorte manual do que está em movimento." />
+            <SectionHeading id="currently-title" icon="compass" title="Atualmente" description="Um resumo do que estou estudando e publicando." />
           </div>
           <dl className="section-body currently-list">
             {currently.map((item) => <div key={item.label}><dt>{item.label}</dt><dd>{item.text}</dd></div>)}

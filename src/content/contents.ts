@@ -7,7 +7,7 @@ export const contentChannel = {
   handle: "@plkontech",
   url: "https://www.youtube.com/@plkontech",
   description:
-    "Estou começando a compartilhar o que aprendo e construo na área de tecnologia. No @plkontech, essa jornada também vira conteúdo.",
+    "Estou começando a publicar vídeos sobre o que aprendo e construo na área de tecnologia.",
 } as const;
 
 // Cadastre conteúdo externo real nesta lista. A página e os destaques se adaptam automaticamente.

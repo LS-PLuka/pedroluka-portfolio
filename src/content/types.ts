@@ -57,7 +57,6 @@ export type Recommendation = {
 
 export type StackGroup = {
   title: string;
-  level: "Foco principal" | "Tecnologias complementares" | "Em aprofundamento";
   items: readonly string[];
 };
 

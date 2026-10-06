@@ -13,6 +13,7 @@ import { experiences } from "@/content/experience";
 import { siteMedia } from "@/content/media";
 import { profile } from "@/content/profile";
 import { recommendations } from "@/content/recommendations";
+import { currentStudies, stack } from "@/content/stack";
 
 export const metadata: Metadata = {
   title: "Sobre",
@@ -25,7 +26,7 @@ export default function AboutPage() {
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <SiteHeader />
       <main id="conteudo">
-        <PageIntro marker="PL" title="Sobre" description={profile.bio} note={profile.currentRole} />
+        <PageIntro icon="person" title="Sobre" description={profile.about} note={profile.currentRole} />
 
         {siteMedia.portrait ? (
           <section className="portrait-section page-grid" aria-label="Retrato">
@@ -35,7 +36,7 @@ export default function AboutPage() {
         ) : null}
 
         <section className="content-section page-grid" id="experiencia" aria-labelledby="experience-title">
-          <div className="section-rail"><SectionHeading id="experience-title" marker="E" title="Experiência profissional" description="Responsabilidades e evolução por empresa." /></div>
+          <div className="section-rail"><SectionHeading id="experience-title" icon="briefcase" title="Experiência profissional" description="Empresa, cargos, períodos e responsabilidades." /></div>
           <div className="section-body">
             {experiences.map((experience) => (
               <article className="experience" key={experience.company}>
@@ -63,7 +64,7 @@ export default function AboutPage() {
         </section>
 
         <section className="content-section page-grid" id="formacao" aria-labelledby="education-title">
-          <div className="section-rail"><SectionHeading id="education-title" marker="F" title="Formação acadêmica" description="Formação técnica e graduação." /></div>
+          <div className="section-rail"><SectionHeading id="education-title" icon="graduation-cap" title="Formação acadêmica" description="Formação técnica e graduação." /></div>
           <div className="section-body entry-list">
             {education.map((item) => (
               <article className="education-entry" key={item.course}>
@@ -75,7 +76,7 @@ export default function AboutPage() {
         </section>
 
         <section className="content-section page-grid" id="credenciais" aria-labelledby="credentials-title">
-          <div className="section-rail"><SectionHeading id="credentials-title" marker="C" title="Cursos e certificações" description="Credenciais com o tipo identificado." /></div>
+          <div className="section-rail"><SectionHeading id="credentials-title" icon="badge" title="Cursos e certificações" description="Programas de formação e credenciais identificados pelo tipo." /></div>
           <div className="section-body entry-list">
             {credentials.map((credential) => (
               <article className="credential-entry" key={credential.name}>
@@ -86,8 +87,26 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className="content-section page-grid" id="stack-completa" aria-labelledby="full-stack-title">
+          <div className="section-rail"><SectionHeading id="full-stack-title" icon="code" title="Stack completa" description="Tecnologias organizadas pelo contexto em que as utilizo." /></div>
+          <div className="section-body stack-directory">
+            <div className="stack-directory__grid">
+              {stack.map((group) => (
+                <article key={group.title}>
+                  <h3>{group.title}</h3>
+                  <ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul>
+                </article>
+              ))}
+            </div>
+            <aside className="stack-directory__studies" aria-labelledby="current-studies-title">
+              <h3 id="current-studies-title">Em estudo atualmente</h3>
+              <ul>{currentStudies.map((item) => <li key={item}>{item}</li>)}</ul>
+            </aside>
+          </div>
+        </section>
+
         <section className="content-section page-grid" id="recomendacoes" aria-labelledby="recommendations-title">
-          <div className="section-rail"><SectionHeading id="recommendations-title" marker="R" title="Recomendações" description="Trechos de recomendações recebidas no LinkedIn." /></div>
+          <div className="section-rail"><SectionHeading id="recommendations-title" icon="quote" title="Recomendações" description="Trechos de recomendações recebidas no LinkedIn." /></div>
           <div className="section-body recommendation-list">
             {recommendations.map((recommendation) => (
               <figure className="recommendation" key={recommendation.author}>

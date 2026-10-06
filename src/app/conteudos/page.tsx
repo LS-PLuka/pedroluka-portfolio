@@ -18,10 +18,10 @@ export default function ContentsPage() {
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <SiteHeader />
       <main id="conteudo">
-        <PageIntro marker="C" title="Conteúdos" description="Artigos, vídeos e publicações para transformar estudo e prática em conhecimento compartilhado." note="Curadoria manual" />
+        <PageIntro icon="article" title="Conteúdos" description="Artigos, vídeos e publicações sobre tecnologia, projetos e estudos em andamento." note="Curadoria manual" />
         <section className="channel-hero page-grid" aria-labelledby="channel-title">
           <div className="channel-hero__handle"><p>{contentChannel.handle}</p><span>YouTube</span></div>
-          <div className="channel-hero__content"><h2 id="channel-title">Uma jornada de tecnologia em construção.</h2><p>{contentChannel.description}</p><a className="primary-link" href={contentChannel.url}>Visitar o canal <ArrowUpRightIcon /></a></div>
+          <div className="channel-hero__content"><h2 id="channel-title">Vídeos sobre tecnologia, projetos e estudos.</h2><p>{contentChannel.description}</p><a className="primary-link" href={contentChannel.url}>Visitar o canal <ArrowUpRightIcon /></a></div>
         </section>
         <section className="content-section page-grid" aria-labelledby="published-title">
           <div className="section-rail"><h2 className="standalone-section-title" id="published-title">Publicados</h2></div>

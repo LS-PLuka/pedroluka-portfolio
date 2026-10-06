@@ -74,7 +74,7 @@ Professional experience, academic education, credentials, and community are sepa
 
 Confirmed profile and timeline data:
 
-- Hero direction: "Desenvolvimento de software com foco em backend." Pedro's current title is "Estagiário de Desenvolvimento de Software".
+- Hero direction: "Engenheiro de software com foco em backend." Keep Pedro's current role explicit as "Estagiário de Desenvolvimento de Software na Ideal Grupo."
 - Ideal Grupo is in São Sebastião, SP, with on-site work. The development internship runs from June 2026 to the present; the Support and IT Infrastructure Apprentice role ran from December 2025 to June 2026.
 - Technology in Systems Analysis and Development at Fatec São Sebastião runs from February 2026 to December 2028 (expected) and is in progress.
 - The Internet Informatics technical course at IFSP ran from July 2024 to December 2025 and is complete.
@@ -94,7 +94,8 @@ Connect content only through real relationships: an experience can point to its 
 
 ## Visual direction
 
-- Use a personal editorial direction with an engineering-notebook treatment on technical pages.
+- Use a personal editorial direction with an engineering-notebook treatment on technical pages, subordinated to clarity and a direct professional presentation.
+- Write specific, factual copy for recruiters and technical readers. Avoid slogans, abstract metaphors, oversized prose, and decorative phrases that compete with the work, roles, projects, or navigation.
 - Prioritize typography, clear hierarchy, generous spacing, and a recognizable composition over decorative effects.
 - Keep transitions simple and discreet, and respect `prefers-reduced-motion`.
 - Do not equate backend work with terminal, neon, animated code, or a hacker aesthetic.

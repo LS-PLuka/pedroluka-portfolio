@@ -17,7 +17,7 @@ export default function ProjectsPage() {
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <SiteHeader />
       <main id="conteudo">
-        <PageIntro marker="P" title="Projetos" description="Sistemas apresentados pelo problema, pelas decisões e pela forma como o comportamento foi verificado." note={`${projects.length} estudos de caso`} />
+        <PageIntro icon="folder" title="Projetos" description="Estudos de caso organizados pelo problema, pelas decisões técnicas e pela forma de verificação." note={`${projects.length} estudos de caso`} />
         <section className="directory-section page-grid" aria-label="Lista de projetos">
           <div className="directory-section__rail"><p>Selecionados</p></div>
           <ProjectList projects={projects} />

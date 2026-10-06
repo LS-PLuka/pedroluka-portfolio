@@ -25,10 +25,10 @@ export default function CommunityPage() {
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <SiteHeader />
       <main id="conteudo">
-        <PageIntro marker="+" title="Comunidade" description="Um espaço para aproximar estudantes, prática em nuvem e troca de conhecimento na Fatec São Sebastião." note={community.period} />
+        <PageIntro icon="users" title="Comunidade" description="AWS Student Builder Group na Fatec São Sebastião e minha atuação como líder." note={community.period} />
 
         <section className="content-section page-grid" aria-labelledby="group-title">
-          <div className="section-rail"><SectionHeading id="group-title" marker="AWS" title="O grupo" description={community.institution} /></div>
+          <div className="section-rail"><SectionHeading id="group-title" icon="users" title="O grupo" description={community.institution} /></div>
           <div className={`community-profile${siteMedia.communityLogo ? " community-profile--with-logo" : ""}`}>
             <OptionalImage image={siteMedia.communityLogo} className="community-profile__logo" />
             <div>
@@ -36,13 +36,17 @@ export default function CommunityPage() {
               <h3>{community.title}</h3>
               <p>{community.description}</p>
               <ul aria-label="Frentes de atuação">{community.fronts.map((front) => <li key={front}>{front}</li>)}</ul>
-              <a className="primary-link" href={community.linkedinUrl}>Acompanhar o grupo no LinkedIn <ArrowUpRightIcon /></a>
+              <div className="link-pair">
+                <a className="primary-link" href={community.linkedinUrl}>Acompanhar o grupo no LinkedIn <ArrowUpRightIcon /></a>
+                <a className="text-link" href={community.credential.url}>{community.credential.label} <ArrowUpRightIcon /></a>
+              </div>
+              <p className="community-credential-note">A credencial registra a liderança no AWS Student Builder Group. Ela é diferente da conclusão do AWS re/Start e não é uma certificação profissional AWS.</p>
             </div>
           </div>
         </section>
 
         <section className="content-section page-grid" aria-labelledby="activities-title">
-          <div className="section-rail"><SectionHeading id="activities-title" marker="A" title="Atividades" description="Registros e materiais serão organizados aqui." /></div>
+          <div className="section-rail"><SectionHeading id="activities-title" icon="compass" title="Atividades" description="Registros e materiais confirmados do grupo." /></div>
           <div className="section-body">
             {communityActivities.length > 0 ? (
               <div className="activity-list">
@@ -71,7 +75,7 @@ export default function CommunityPage() {
 
         {communityContents.length > 0 ? (
           <section className="content-section page-grid" aria-labelledby="community-content-title">
-            <div className="section-rail"><SectionHeading id="community-content-title" marker="C" title="Conteúdos da comunidade" /></div>
+            <div className="section-rail"><SectionHeading id="community-content-title" icon="article" title="Conteúdos da comunidade" /></div>
             <div className="section-body"><ContentList entries={communityContents} /></div>
           </section>
         ) : null}
