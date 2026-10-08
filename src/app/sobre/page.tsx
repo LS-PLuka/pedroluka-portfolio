@@ -14,7 +14,7 @@ import { experiences } from "@/content/experience";
 import { siteMedia } from "@/content/media";
 import { profile } from "@/content/profile";
 import { recommendations } from "@/content/recommendations";
-import { currentStudies, stack } from "@/content/stack";
+import { stack } from "@/content/stack";
 
 export const metadata: Metadata = {
   title: "Sobre",
@@ -89,7 +89,7 @@ export default function AboutPage() {
         </section>
 
         <section className="content-section page-grid" id="stack-completa" aria-labelledby="full-stack-title">
-          <div className="section-rail"><SectionHeading id="full-stack-title" icon="code" title="Stack completa" description="Tecnologias organizadas pelo contexto em que as utilizo." /></div>
+          <div className="section-rail"><SectionHeading id="full-stack-title" icon="code" title="Stack completa" description="Tecnologias e práticas organizadas pelo contexto em que as utilizo." /></div>
           <div className="section-body stack-directory">
             <div className="stack-directory__grid">
               {stack.map((group) => (
@@ -99,10 +99,6 @@ export default function AboutPage() {
                 </article>
               ))}
             </div>
-            <aside className="stack-directory__studies" aria-labelledby="current-studies-title">
-              <h3 id="current-studies-title">Em estudo atualmente</h3>
-              <ul>{currentStudies.map((item) => <li key={item}>{item}</li>)}</ul>
-            </aside>
           </div>
         </section>
 

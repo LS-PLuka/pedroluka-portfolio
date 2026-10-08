@@ -5,28 +5,38 @@ export const featuredStack = ["Java", "Spring Boot", "PostgreSQL", "RabbitMQ", "
 export const stack: readonly StackGroup[] = [
   {
     title: "Backend",
-    items: ["Java", "Spring Boot", "Node.js", "Express"],
+    items: ["Java", "Spring Boot", "Go"],
   },
   {
-    title: "Dados",
+    title: "Banco de Dados",
     items: ["PostgreSQL", "MongoDB", "MySQL", "JPA", "Hibernate"],
   },
   {
-    title: "Segurança e integrações",
-    items: ["Spring Security", "JWT", "OAuth 2.0", "RabbitMQ", "APIs REST", "Webhooks"],
+    title: "APIs e segurança",
+    items: ["APIs REST", "OpenAPI", "Swagger", "Spring Security", "JWT", "OAuth 2.0", "Webhooks"],
+  },
+  {
+    title: "Mensageria",
+    items: ["RabbitMQ"],
   },
   {
     title: "Testes",
-    items: ["JUnit", "Mockito", "Testcontainers", "Jest"],
+    items: ["JUnit", "Mockito", "Testcontainers", "TDD"],
+  },
+  {
+    title: "Cloud",
+    items: ["AWS"],
   },
   {
     title: "Infraestrutura e entrega",
-    items: ["Docker", "GitHub Actions", "AWS", "Linux"],
+    items: ["Docker", "GitHub Actions", "CI/CD", "Linux", "Windows Server"],
+  },
+  {
+    title: "IA aplicada",
+    items: ["Claude Code", "Codex", "Integrações com IA"],
   },
   {
     title: "Frontend",
     items: ["TypeScript", "React", "Next.js", "React Native"],
   },
 ];
-
-export const currentStudies = ["Go", "Integrações com inteligência artificial"] as const;
