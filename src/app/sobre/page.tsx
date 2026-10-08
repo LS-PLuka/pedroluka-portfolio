@@ -77,7 +77,7 @@ export default function AboutPage() {
         </section>
 
         <section className="content-section page-grid" id="credenciais" aria-labelledby="credentials-title">
-          <div className="section-rail"><SectionHeading id="credentials-title" icon="badge" title="Cursos e certificações" description="Programas de formação e credenciais identificados pelo tipo." /></div>
+          <div className="section-rail"><SectionHeading id="credentials-title" icon="badge" title="Cursos e credenciais" description="Programas de formação e cursos identificados pelo tipo." /></div>
           <div className="section-body entry-list">
             {credentials.map((credential) => (
               <article className="credential-entry" key={credential.name}>

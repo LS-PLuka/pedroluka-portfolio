@@ -15,15 +15,16 @@ export const profile = {
   location: "São Sebastião, SP",
   headline: "Engenheiro de software com foco em backend.",
   summary:
-    "Trabalho com Java e Spring Boot e lidero o AWS Student Builder Group na Fatec São Sebastião.",
+    "Atuo com Java e Spring Boot na Ideal Grupo e lidero o AWS Student Builder Group na Fatec São Sebastião.",
   homeAbout: [
-    "Atualmente, trabalho na Ideal Grupo desenvolvendo softwares internos que substituem ferramentas de terceiros e apoiam processos de negócio.",
-    "Sou Técnico em Informática para Internet pelo IFSP, estudante de ADS na Fatec São Sebastião e concluí o AWS re/Start. Também desenvolvo projetos pessoais e estou começando a compartilhar conteúdo de tecnologia.",
+    "Na Ideal Grupo, participo do desenvolvimento de softwares internos voltados à substituição de ferramentas de terceiros e à melhoria de processos de negócio.",
+    "Sou Técnico em Informática para Internet pelo IFSP, estudante de ADS na Fatec São Sebastião e concluí o AWS re/Start. Também lidero o AWS Student Builder Group da Fatec e mantenho estudos em Go e integrações com inteligência artificial.",
   ],
   about: [
-    "Atualmente, atuo na Ideal Grupo utilizando principalmente Java e Spring Boot no desenvolvimento de softwares internos que substituem ferramentas de terceiros. Trabalho com integrações entre sistemas, mensageria, Docker e testes automatizados.",
-    "Na área de cloud, concluí o AWS re/Start e lidero o AWS Student Builder Group na Fatec São Sebastião, incentivando o aprendizado prático e a colaboração entre estudantes.",
-    "Sou Técnico em Informática para Internet pelo IFSP e curso Análise e Desenvolvimento de Sistemas na Fatec São Sebastião. Fora do trabalho, mantenho projetos pessoais e estudos em Go e integrações com inteligência artificial.",
+    "Sou engenheiro de software com foco em backend. Atualmente, atuo na Ideal Grupo utilizando principalmente Java e Spring Boot no desenvolvimento de softwares internos criados para substituir ferramentas de terceiros e otimizar processos de negócio.",
+    "No dia a dia, trabalho com integrações entre sistemas, arquitetura de microsserviços, mensageria com RabbitMQ, conteinerização com Docker e testes automatizados.",
+    "Na área de cloud, concluí o AWS re/Start e lidero o AWS Student Builder Group na Fatec São Sebastião, promovendo aprendizado prático e colaboração entre estudantes.",
+    "Sou Técnico em Informática para Internet pelo IFSP e curso Análise e Desenvolvimento de Sistemas na Fatec São Sebastião. Também mantenho projetos pessoais e estudos em Go e integrações com inteligência artificial.",
   ],
   email: "dev.pedroluka@gmail.com",
   github: "https://github.com/LS-PLuka",

@@ -1,15 +1,20 @@
 export const community = {
-  role: "AWS Student Builder Group Leader",
+  role: "AWS Student Builder Group Leader (SBGL)",
   institution: "AWS Student Builder Group — Fatec São Sebastião",
   period: "Set 2026 — atual",
-  title: "Liderança estudantil em cloud na Fatec São Sebastião.",
+  title: "Aprendizado em cloud mais acessível e prático na Fatec.",
   description:
-    "Lidero o AWS Student Builder Group na Fatec São Sebastião para tornar o aprendizado em nuvem mais acessível e prático, conectando estudantes e incentivando a troca de conhecimento.",
-  fronts: ["Encontros", "Oficinas", "Grupos de estudo", "Projetos práticos"],
+    "Lidero o AWS Student Builder Group na Fatec São Sebastião, conectando estudantes e promovendo a aplicação prática de conhecimentos em nuvem.",
+  fronts: [
+    "Encontros, oficinas e grupos de estudo",
+    "Projetos práticos em cloud",
+    "Troca de conhecimento entre estudantes",
+    "Desenvolvimento técnico e profissional",
+  ],
   linkedinUrl: "https://www.linkedin.com/company/aws-sbg-fatec-saosebastiao/about/",
   credential: {
     name: "AWS Student Builder Group Leader",
-    url: "https://www.credly.com/badges/2aca1c26-5501-4a8c-8e4e-56f3f4df96f3/linked_in_profile",
+    url: "https://www.credly.com/badges/5b947240-7ad9-4a2e-89a5-c8c62ba2b2d4/linked_in_profile",
     label: "Ver credencial de AWS SBG Leader",
   },
 } as const;

@@ -21,7 +21,10 @@ export const projects: readonly CaseStudy[] = [
       "O processo admissional reúne dados pessoais, documentos, validações do RH, cadastro no ERP e assinaturas. A solução foi desenvolvida para substituir uma ferramenta terceirizada com custo aproximado de R$ 100 mil por ano e concentrar esse fluxo em um sistema interno.",
       "O sistema organiza essa jornada sem tratar a admissão como um formulário único: cada etapa possui estado próprio e pode voltar para correção sem desfazer o que já foi aprovado.",
     ],
-    // A contribuição individual e o estado de implantação aguardam confirmação.
+    contribution: [
+      "Atuei no desenvolvimento do sistema de ponta a ponta, trabalhando no backend com Java e Spring Boot, no frontend com Next.js e TypeScript e nas integrações com Protheus, Claude Vision e Autentique.",
+      "Também trabalhei na investigação de falhas de integração com o sistema legado e em funcionalidades incorporadas durante o desenvolvimento, como acompanhamento de status e download dos documentos em arquivo ZIP.",
+    ],
     flow: [
       {
         title: "Entrada consentida",
@@ -82,13 +85,13 @@ export const projects: readonly CaseStudy[] = [
       { technology: "Autentique GraphQL", use: "Envio do kit e coordenação das assinaturas." },
     ],
     verification: [
-      "Fluxo documentado da entrada do candidato até o envio do kit para assinatura.",
+      "O fluxo principal foi concluído e validado da entrada do candidato até a integração com o ERP e o envio do kit para assinatura.",
       "Migrations append-only com Flyway e validação do schema pelo Hibernate.",
       "Repositórios privados e ausência de telas publicáveis limitam a verificação pública à arquitetura e ao fluxo que podem ser divulgados.",
     ],
     materials: [],
     evidenceNote:
-      "Estudo construído a partir do briefing técnico fornecido sobre o projeto. Não afirma uso em produção, métricas ou autoria exclusiva.",
+      "Estudo construído a partir do detalhamento técnico e do relato fornecido por Pedro. A validação do fluxo principal não equivale a afirmar implantação em produção, métricas ou autoria exclusiva.",
   },
   {
     id: "antifraud-system",

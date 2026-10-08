@@ -8,7 +8,7 @@ export const education: readonly Education[] = [
     status: "Em andamento",
     period: "Fev 2026 — dez 2028 (previsão)",
     description:
-      "Graduação voltada ao desenvolvimento de software e aos fundamentos da computação, com estudos em programação, engenharia de software, bancos de dados e sistemas.",
+      "Formação focada em desenvolvimento de software, arquitetura de sistemas e fundamentos da computação, com estudos em engenharia de software, aplicações backend, bancos de dados, APIs REST, programação orientada a objetos, Linux e projetos integradores em equipe.",
   },
   {
     course: "Informática para Internet",
@@ -17,6 +17,6 @@ export const education: readonly Education[] = [
     status: "Concluído",
     period: "Jul 2024 — dez 2025",
     description:
-      "Formação técnica em desenvolvimento web, com projetos utilizando React, Next.js, React Native, Node.js, Express e MySQL, além de testes com Jest, Docker e ambientes Linux.",
+      "Formação técnica com foco em desenvolvimento de software, aplicações web e fundamentos de programação, com projetos em React, Next.js, React Native, Node.js, Express e MySQL, além de testes com Jest, Docker, Linux e metodologias ágeis.",
   },
 ];
