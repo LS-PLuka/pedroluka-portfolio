@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { ArrowRightIcon } from "@/components/icons";
+import { ArrowRightIcon, ArrowUpRightIcon } from "@/components/icons";
 import { OptionalImage } from "@/components/optional-image";
 import { PageIntro } from "@/components/page-intro";
 import { PageTransition } from "@/components/page-transition";
+import { RecommendationList } from "@/components/recommendation-list";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -64,7 +65,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="content-section page-grid" id="formacao" aria-labelledby="education-title">
+        <section className="content-section content-section--blue page-grid" id="formacao" aria-labelledby="education-title">
           <div className="section-rail"><SectionHeading id="education-title" icon="graduation-cap" title="Formação acadêmica" description="Formação técnica e graduação." /></div>
           <div className="section-body entry-list">
             {education.map((item) => (
@@ -76,13 +77,26 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="content-section page-grid" id="credenciais" aria-labelledby="credentials-title">
+        <section className="content-section content-section--blue-soft page-grid" id="credenciais" aria-labelledby="credentials-title">
           <div className="section-rail"><SectionHeading id="credentials-title" icon="badge" title="Cursos e credenciais" description="Programas de formação e cursos identificados pelo tipo." /></div>
           <div className="section-body entry-list">
             {credentials.map((credential) => (
               <article className="credential-entry" key={credential.name}>
-                <div><p className="credential-entry__type">{credential.type}</p><h3>{credential.name}</h3>{credential.issuer ? <p>{credential.issuer}</p> : null}{credential.description ? <p className="entry-description">{credential.description}</p> : null}</div>
-                <div className="credential-entry__status"><span>{credential.status}</span>{credential.period ? <p>{credential.period}</p> : null}{credential.verificationUrl ? <a href={credential.verificationUrl}>Ver credencial</a> : null}</div>
+                <div>
+                  <p className="credential-entry__type">{credential.type}</p>
+                  <h3>{credential.name}</h3>
+                  {credential.issuerLinks ? (
+                    <p className="credential-entry__issuers" aria-label="Instituições relacionadas">
+                      {credential.issuerLinks.map((issuer) => (
+                        <a className="institution-link" href={issuer.href} key={issuer.href} target="_blank" rel="noopener noreferrer">
+                          {issuer.label} <ArrowUpRightIcon />
+                        </a>
+                      ))}
+                    </p>
+                  ) : credential.issuer ? <p>{credential.issuer}</p> : null}
+                  {credential.description ? <p className="entry-description">{credential.description}</p> : null}
+                </div>
+                <div className="credential-entry__status"><span>{credential.status}</span>{credential.period ? <p>{credential.period}</p> : null}{credential.verificationUrl ? <a href={credential.verificationUrl} target="_blank" rel="noopener noreferrer">Ver credencial</a> : null}</div>
               </article>
             ))}
           </div>
@@ -102,16 +116,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="content-section page-grid" id="recomendacoes" aria-labelledby="recommendations-title">
+        <section className="content-section content-section--blue-pale page-grid" id="recomendacoes" aria-labelledby="recommendations-title">
           <div className="section-rail"><SectionHeading id="recommendations-title" icon="quote" title="Recomendações" description="Trechos de recomendações recebidas no LinkedIn." /></div>
-          <div className="section-body recommendation-list">
-            {recommendations.map((recommendation) => (
-              <figure className="recommendation" key={recommendation.author}>
-                <blockquote><p>“{recommendation.excerpt}”</p></blockquote>
-                <figcaption><a href={recommendation.profileUrl}>{recommendation.author}</a><span>{recommendation.relationship}</span><span>{recommendation.period}</span></figcaption>
-              </figure>
-            ))}
-          </div>
+          <div className="section-body"><RecommendationList recommendations={recommendations} /></div>
         </section>
       </main></PageTransition>
       <SiteFooter />

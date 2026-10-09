@@ -1,3 +1,4 @@
+import { ArrowUpRightIcon } from "@/components/icons";
 import type { Recommendation } from "@/content/types";
 
 export function RecommendationList({
@@ -14,7 +15,14 @@ export function RecommendationList({
             <strong>{recommendation.author}</strong>
             <span>{recommendation.relationship}</span>
             <span>{recommendation.period}</span>
-            <a href={recommendation.profileUrl}>Perfil no LinkedIn</a>
+            <a
+              className="recommendation-profile-link"
+              href={recommendation.profileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver perfil no LinkedIn <ArrowUpRightIcon />
+            </a>
           </figcaption>
         </figure>
       ))}

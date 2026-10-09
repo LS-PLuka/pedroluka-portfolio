@@ -30,7 +30,7 @@ export function ProjectList({ projects }: { projects: readonly CaseStudy[] }) {
                 <ArrowRightIcon />
               </Link>
               {project.repositoryUrl ? (
-                <a className="text-link" href={project.repositoryUrl}>
+                <a className="text-link" href={project.repositoryUrl} target="_blank" rel="noopener noreferrer">
                   GitHub
                   <ArrowUpRightIcon />
                 </a>

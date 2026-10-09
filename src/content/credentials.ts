@@ -6,6 +6,10 @@ export const credentials: readonly Credential[] = [
     type: "Programa de formação",
     status: "Concluído",
     issuer: "AWS / Espro",
+    issuerLinks: [
+      { label: "AWS re/Start", href: "https://aws.amazon.com/training/restart/" },
+      { label: "Espro", href: "https://www.espro.org.br/" },
+    ],
     period: "Set 2026",
     description:
       "Programa de formação concluído após 12 semanas de estudos e laboratórios em computação em nuvem, serviços AWS, Linux, redes, bancos de dados e segurança.",
@@ -17,6 +21,7 @@ export const credentials: readonly Credential[] = [
     type: "Curso",
     status: "Concluído",
     issuer: "Alura",
+    issuerLinks: [{ label: "Alura", href: "https://www.alura.com.br/" }],
     period: "Set 2026",
     description: "Formação prática em testes de integração para aplicações Java.",
     verificationUrl:
@@ -27,6 +32,7 @@ export const credentials: readonly Credential[] = [
     type: "Curso",
     status: "Concluído",
     issuer: "Alura",
+    issuerLinks: [{ label: "Alura", href: "https://www.alura.com.br/" }],
     period: "Jun 2026",
     description:
       "Formação em arquitetura de microsserviços com Java, Spring e comunicação assíncrona com RabbitMQ.",
@@ -38,6 +44,7 @@ export const credentials: readonly Credential[] = [
     type: "Curso",
     status: "Concluído",
     issuer: "Alura",
+    issuerLinks: [{ label: "Alura", href: "https://www.alura.com.br/" }],
     period: "Jun 2026",
     description:
       "Formação em autenticação e autorização de aplicações Java com Spring Security.",
@@ -49,6 +56,7 @@ export const credentials: readonly Credential[] = [
     type: "Curso",
     status: "Concluído",
     issuer: "Alura",
+    issuerLinks: [{ label: "Alura", href: "https://www.alura.com.br/" }],
     period: "Mar 2026",
     description:
       "Formação sobre uso de inteligência artificial como apoio ao fluxo de desenvolvimento de software.",

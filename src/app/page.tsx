@@ -40,15 +40,15 @@ export default function Home() {
               <Link className="primary-link" href="/projetos">Ver meus projetos</Link>
               <Link className="text-link" href="/sobre">Sobre mim</Link>
               <ul className="hero__socials" aria-label="Perfis profissionais">
-                <li><a href={profile.github} aria-label="GitHub de Pedro Luka"><SocialIcon name="github" /></a></li>
-                <li><a href={profile.linkedin} aria-label="LinkedIn de Pedro Luka"><SocialIcon name="linkedin" /></a></li>
+                <li><a href={profile.github} aria-label="GitHub de Pedro Luka" target="_blank" rel="noopener noreferrer"><SocialIcon name="github" /></a></li>
+                <li><a href={profile.linkedin} aria-label="LinkedIn de Pedro Luka" target="_blank" rel="noopener noreferrer"><SocialIcon name="linkedin" /></a></li>
               </ul>
             </div>
           </div>
           <OptionalImage image={siteMedia.portrait} className="hero__portrait" />
         </section>
 
-        <section className="content-section page-grid" id="stack" aria-labelledby="stack-title">
+        <section className="content-section content-section--blue page-grid" id="stack" aria-labelledby="stack-title">
           <div className="section-rail">
             <SectionHeading id="stack-title" icon="code" title="Tecnologias que utilizo" description="Tecnologias centrais na minha atuação." />
           </div>
@@ -68,7 +68,7 @@ export default function Home() {
           <ProjectList projects={projects} />
         </section>
 
-        <section className="content-section page-grid" id="sobre" aria-labelledby="about-title">
+        <section className="content-section content-section--blue-soft page-grid" id="sobre" aria-labelledby="about-title">
           <div className="section-rail">
             <SectionHeading id="about-title" icon="person" title="Sobre mim" description="Atuação profissional, formação e estudos atuais." />
           </div>
@@ -83,7 +83,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="content-section page-grid" id="recomendacoes" aria-labelledby="home-recommendations-title">
+        <section className="content-section content-section--blue-pale page-grid" id="recomendacoes" aria-labelledby="home-recommendations-title">
           <div className="section-rail">
             <SectionHeading id="home-recommendations-title" icon="quote" title="Recomendações" description="Trechos de recomendações recebidas no LinkedIn." />
           </div>
@@ -92,7 +92,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="content-section page-grid" id="comunidade" aria-labelledby="community-title">
+        <section className="content-section content-section--blue page-grid" id="comunidade" aria-labelledby="community-title">
           <div className="section-rail">
             <SectionHeading id="community-title" icon="users" title="Comunidade" description="AWS Student Builder Group na Fatec São Sebastião." />
           </div>
@@ -107,8 +107,8 @@ export default function Home() {
               <ul aria-label="Frentes de atuação">{community.fronts.map((front) => <li key={front}>{front}</li>)}</ul>
               <div className="link-pair">
                 <Link className="primary-link" href="/comunidade">Conhecer a comunidade <ArrowRightIcon /></Link>
-                <a className="text-link" href={community.linkedinUrl}>Página do grupo no LinkedIn <ArrowUpRightIcon /></a>
-                <a className="text-link" href={community.credential.url}>{community.credential.label} <ArrowUpRightIcon /></a>
+                <a className="text-link" href={community.linkedinUrl} target="_blank" rel="noopener noreferrer">Página do grupo no LinkedIn <ArrowUpRightIcon /></a>
+                <a className="text-link" href={community.credential.url} target="_blank" rel="noopener noreferrer">{community.credential.label} <ArrowUpRightIcon /></a>
               </div>
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function Home() {
               <h3>Conteúdo sobre backend, cloud e estudos em andamento.</h3>
               <p>{contentChannel.description}</p>
               <div className="link-pair">
-                <a className="primary-link" href={contentChannel.url}>Visitar o canal <ArrowUpRightIcon /></a>
+                <a className="primary-link" href={contentChannel.url} target="_blank" rel="noopener noreferrer">Visitar o canal <ArrowUpRightIcon /></a>
                 <Link className="text-link" href="/conteudos">Ver todos os conteúdos <ArrowRightIcon /></Link>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="content-section page-grid" id="atualmente" aria-labelledby="currently-title">
+        <section className="content-section content-section--blue-soft page-grid" id="atualmente" aria-labelledby="currently-title">
           <div className="section-rail">
             <SectionHeading id="currently-title" icon="compass" title="Atualmente" description="Um resumo do que estou estudando e publicando." />
           </div>

@@ -20,12 +20,12 @@ export function ContactSection() {
             </a>
             <CopyEmail email={profile.email} />
           </div>
-          <a className="contact-link" href={profile.github}>
+          <a className="contact-link" href={profile.github} target="_blank" rel="noopener noreferrer">
             <span>GitHub</span>
             <strong>@LS-PLuka</strong>
             <ArrowUpRightIcon />
           </a>
-          <a className="contact-link" href={profile.linkedin}>
+          <a className="contact-link" href={profile.linkedin} target="_blank" rel="noopener noreferrer">
             <span>LinkedIn</span>
             <strong>pedroluka-dev</strong>
             <ArrowUpRightIcon />

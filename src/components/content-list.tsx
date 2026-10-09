@@ -39,7 +39,7 @@ export function ContentList({ entries }: { entries: readonly ContentEntry[] }) {
                 Ler artigo <ArrowRightIcon />
               </Link>
             ) : (
-              <a className="text-link" href={href}>
+              <a className="text-link" href={href} target="_blank" rel="noopener noreferrer">
                 Ver na plataforma original <ArrowUpRightIcon />
               </a>
             )}

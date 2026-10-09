@@ -139,7 +139,7 @@ export function CaseStudyPage({ project, otherProject }: CaseStudyPageProps) {
             <ul className="material-list">
               {project.materials.map((material) => (
                 <li key={material.href}>
-                  <a href={material.href}>{material.label}<ArrowUpRightIcon /></a>
+                  <a href={material.href} target="_blank" rel="noopener noreferrer">{material.label}<ArrowUpRightIcon /></a>
                 </li>
               ))}
             </ul>

@@ -28,7 +28,7 @@ export default function CommunityPage() {
       <PageTransition><main id="conteudo">
         <PageIntro icon="users" title="Comunidade" description="AWS Student Builder Group na Fatec São Sebastião e minha atuação como líder." note={community.period} />
 
-        <section className="content-section page-grid" aria-labelledby="group-title">
+        <section className="content-section content-section--blue page-grid" aria-labelledby="group-title">
           <div className="section-rail"><SectionHeading id="group-title" icon="users" title="O grupo" description={community.institution} /></div>
           <div className={`community-profile${siteMedia.communityLogo ? " community-profile--with-logo" : ""}`}>
             <OptionalImage image={siteMedia.communityLogo} className="community-profile__logo" />
@@ -38,8 +38,8 @@ export default function CommunityPage() {
               <p>{community.description}</p>
               <ul aria-label="Frentes de atuação">{community.fronts.map((front) => <li key={front}>{front}</li>)}</ul>
               <div className="link-pair">
-                <a className="primary-link" href={community.linkedinUrl}>Acompanhar o grupo no LinkedIn <ArrowUpRightIcon /></a>
-                <a className="text-link" href={community.credential.url}>{community.credential.label} <ArrowUpRightIcon /></a>
+                <a className="primary-link" href={community.linkedinUrl} target="_blank" rel="noopener noreferrer">Acompanhar o grupo no LinkedIn <ArrowUpRightIcon /></a>
+                <a className="text-link" href={community.credential.url} target="_blank" rel="noopener noreferrer">{community.credential.label} <ArrowUpRightIcon /></a>
               </div>
               <p className="community-credential-note">A credencial registra a liderança no AWS Student Builder Group. Ela é diferente da conclusão do AWS re/Start e não é uma certificação profissional AWS.</p>
             </div>
@@ -62,7 +62,7 @@ export default function CommunityPage() {
                     ) : null}
                     {activity.materials ? (
                       <ul className="activity-materials" aria-label={`Materiais de ${activity.title}`}>
-                        {activity.materials.map((material) => <li key={material.href}><a href={material.href}>{material.label}<ArrowUpRightIcon /></a></li>)}
+                        {activity.materials.map((material) => <li key={material.href}><a href={material.href} target="_blank" rel="noopener noreferrer">{material.label}<ArrowUpRightIcon /></a></li>)}
                       </ul>
                     ) : null}
                   </article>
@@ -75,7 +75,7 @@ export default function CommunityPage() {
         </section>
 
         {communityContents.length > 0 ? (
-          <section className="content-section page-grid" aria-labelledby="community-content-title">
+          <section className="content-section content-section--blue-pale page-grid" aria-labelledby="community-content-title">
             <div className="section-rail"><SectionHeading id="community-content-title" icon="article" title="Conteúdos da comunidade" /></div>
             <div className="section-body"><ContentList entries={communityContents} /></div>
           </section>

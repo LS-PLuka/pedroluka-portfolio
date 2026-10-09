@@ -42,6 +42,10 @@ export type Credential = {
   type: "Programa de formação" | "Curso" | "Certificação profissional";
   status: "Concluído" | "Em andamento";
   issuer?: string;
+  issuerLinks?: readonly {
+    label: string;
+    href: `https://${string}`;
+  }[];
   period?: string;
   description?: string;
   verificationUrl?: `https://${string}`;
